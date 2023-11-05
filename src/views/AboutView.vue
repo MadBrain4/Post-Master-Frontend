@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="home">
+    <MainLayout>
+      <template v-slot:main >
+        <div>
+          This is an about page
+        </div>
+      </template>
+    </MainLayout>
   </div>
 </template>
+
+<script setup>
+  import MainLayout from '@/layouts/MainLayout.vue';
+</script>
