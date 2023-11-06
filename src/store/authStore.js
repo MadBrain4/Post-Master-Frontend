@@ -1,10 +1,15 @@
 import { defineStore } from 'pinia'
 
-export const useAlertsStore = defineStore('alerts', {
+export const useAuthStore = defineStore('Auth', {
     state: () => {
         return {
             jwt: '',
-            user: {}
+            user: {},
+            errors: {}
         }
     },
+    persist: {
+        storage: sessionStorage,
+        paths: ['jwt', 'user']
+    }
 })

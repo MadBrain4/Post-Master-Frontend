@@ -13,9 +13,10 @@
                     <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <SectionMenu name="home" :section="$t('sections.home')" />
                         <SectionMenu name="about" :section="$t('sections.about')" />
-                        <SectionMenu name="login" :section="$t('sections.login')" />
-                        <SectionMenu name="register" :section="$t('sections.register')" />
-                        <SectionMenu name="dashboard" :section="$t('sections.dashboard')" />
+                        <SectionMenu v-if="authStore.jwt === ''" name="login" :section="$t('sections.login')" />
+                        <SectionMenu v-if="authStore.jwt === ''" name="register" :section="$t('sections.register')" />
+                        <SectionMenu v-if="authStore.jwt !== ''" name="dashboard" :section="$t('sections.dashboard')" />
+                        <SectionMenu v-if="authStore.jwt !== ''" name="posts" :section="$t('sections.posts')" />
                         <LanguageChange />
                     </ul>
                 </div>
@@ -28,4 +29,7 @@
     import SectionMenu from "@/components/menu/SectionMenu.vue";
     import LogoMenu from "@/components/menu/LogoMenu.vue";
     import LanguageChange from '@/components/menu/LanguageChange.vue';
+    import { useAuthStore } from '@/store/authStore';
+
+    const authStore = useAuthStore()
 </script>

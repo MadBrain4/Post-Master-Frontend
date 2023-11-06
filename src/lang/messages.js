@@ -5,7 +5,8 @@ export const messages = {
             about: 'About',
             login: 'Login',
             register: 'Register',
-            dashboard: 'Dashboard'
+            dashboard: 'Dashboard',
+            posts: 'Posts'
         }
     },
     es: {
@@ -14,7 +15,8 @@ export const messages = {
             about: 'Acerca de',
             login: 'Iniciar Sesión',
             register: 'Registrar',
-            dashboard: 'Panel de control'
+            dashboard: 'Panel de control',
+            posts: 'Posts'
         }
     }
 }

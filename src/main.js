@@ -4,6 +4,7 @@ import router from './router'
 import './style.css'
 import { createI18n } from 'vue-i18n'
 import { createPinia } from 'pinia'
+import piniaPluginPersistedState from 'pinia-plugin-persistedstate'
 
 //Messages
 import { messages } from '@/lang/messages'
@@ -15,6 +16,8 @@ const i18n = createI18n({
 })
 
 const pinia = createPinia()
+pinia.use(piniaPluginPersistedState)
+
 
 const app = createApp(App)
 
