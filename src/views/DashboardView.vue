@@ -3,7 +3,7 @@
       <MainLayout>
         <template v-slot:main >
           <div>
-            Dashboard
+            <h3>Dashboard</h3>
           </div>
         </template>
       </MainLayout>

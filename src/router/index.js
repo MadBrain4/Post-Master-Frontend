@@ -55,6 +55,11 @@ const routes = [
       requireAuth: true,
       isAuth: false,
     }
+  },
+  {
+    path: '/posts/:id',
+    name: 'postShow',
+    component: () => import(/* webpackChunkName: "dashboard" */ '../views/posts/PostShow.vue'),
   }
 ]
 

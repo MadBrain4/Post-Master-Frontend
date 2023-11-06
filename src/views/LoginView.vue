@@ -22,7 +22,7 @@
                       <ul>
                         <li v-for="error in authStore.errors" :key="error" >{{ error }}</li>
                       </ul>
-                      <button type="submit" class="w-full text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Sign in</button>
+                      <button id="submit" type="submit" class="w-full text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Sign in</button>
                       <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                           Don’t have an account yet? <router-link :to="{name: 'register'}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</router-link>
                       </p>
